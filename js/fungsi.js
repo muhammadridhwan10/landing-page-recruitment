@@ -1,19 +1,19 @@
 const jobs = [
     {
         id: 1,
-        title: "Software Developer - Digital Factory",
+        title: "Staff Software Developer",
         company: "ptpn1",
         companyName: "PTPN I",
         companyLogo: "/image/ptpn1.png",
         category: "technology",
         location: "Jakarta Selatan",
         type: "contract",
-        majors: ["Teknik Informatika", "Sistem Informasi", "Ilmu Komputer", "Teknik Komputer"],
+        majors: ["Teknik Informatika", "Teknologi Rekayasa Perangkat Lunak", "Sistem Informasi", "Ilmu Komputer", "GIS"],
         applyLink: "https://recruitment.ptpn1.co.id/software-developer"
     },
     {
         id: 2,
-        title: "ODS Bidang Keuangan",
+        title: "Staff Finance",
         company: "ptpn3",
         companyName: "PTPN III",
         companyLogo: "/image/ptpn3.png",
@@ -21,11 +21,11 @@ const jobs = [
         location: "Jakarta Selatan",
         type: "contract",
         majors: ["Akuntansi", "Manajemen Keuangan", "Ekonomi"],
-        applyLink: "https://recruitment.ptpn3.co.id/ods-keuangan"
+        applyLink: "https://recruitment.ptpn3.co.id/staff-keuangan"
     },
     {
         id: 3,
-        title: "ODS Bidang Operational",
+        title: "Staff Production",
         company: "ptpn3",
         companyName: "PTPN III",
         companyLogo: "/image/ptpn3.png",
@@ -33,23 +33,23 @@ const jobs = [
         location: "Jakarta Selatan",
         type: "contract",
         majors: ["Agroteknologi", "Agronomi", "Teknik Pertanian", "Teknik Mesin", "Teknik Elektro"],
-        applyLink: "https://recruitment.ptpn3.co.id/ods-operational"
+        applyLink: "https://recruitment.ptpn3.co.id/staff-operational"
     },
     {
         id: 4,
-        title: "ODS Bidang Umum",
+        title: "Staff HC & Legal",
         company: "ptpn3",
         companyName: "PTPN III",
         companyLogo: "/image/ptpn3.png",
         category: "administration",
         location: "Jakarta Selatan",
         type: "contract",
-        majors: ["Semua Jurusan"],
-        applyLink: "https://recruitment.ptpn3.co.id/ods-umum"
+        majors: ["Psikologi","Hukum","Manajemen","Semua Jurusan"],
+        applyLink: "https://recruitment.ptpn3.co.id/staff-umum"
     },
     {
         id: 5,
-        title: "ODS Bidang Keuangan",
+        title: "Staff Finance",
         company: "ptpn4",
         companyName: "PTPN IV",
         companyLogo: "/image/ptpn4.png",
@@ -57,42 +57,42 @@ const jobs = [
         location: "Jakarta Selatan",
         type: "contract",
         majors: ["Akuntansi", "Manajemen Keuangan", "Ekonomi"],
-        applyLink: "https://recruitment.ptpn4.co.id/ods-keuangan"
+        applyLink: "https://recruitment.ptpn4.co.id/staff-keuangan"
     },
     {
         id: 6,
-        title: "ODS Bidang Umum",
+        title: "Staff HC & Legal",
         company: "ptpn4",
         companyName: "PTPN IV",
         companyLogo: "/image/ptpn4.png",
         category: "administration",
         location: "Jakarta Selatan",
         type: "contract",
-        majors: ["Hukum", "Psikologi", "Komunikasi", "Manajemen", "Administrasi Bisnis"],
-        applyLink: "https://recruitment.ptpn4.co.id/ods-umum"
+        majors: ["Psikologi","Hukum","Manajemen"],
+        applyLink: "https://recruitment.ptpn4.co.id/staff-umum"
     },
     {
         id: 7,
-        title: "ODS Bidang Keuangan",
+        title: "Staff Finance",
         company: "sgn",
-        companyName: "SGN",
+        companyName: "PT SGN",
         companyLogo: "/image/sgn.png",
         category: "finance",
         location: "Surabaya",
         type: "contract",
         majors: ["Akuntansi", "Manajemen Keuangan", "Ekonomi"],
-        applyLink: "https://recruitment.sgn.co.id/ods-keuangan"
+        applyLink: "https://recruitment.sgn.co.id/staff-keuangan"
     },
     {
         id: 8,
-        title: "Software Developer - Digital Factory",
+        title: "Staff Software Developer",
         company: "sgn",
-        companyName: "SGN",
+        companyName: "PT SGN",
         companyLogo: "/image/sgn.png",
         category: "technology",
         location: "Surabaya",
         type: "contract",
-        majors: ["Teknik Informatika", "Sistem Informasi", "Ilmu Komputer", "Teknik Komputer"],
+        majors: ["Teknik Informatika", "Teknologi Rekayasa Perangkat Lunak", "Sistem Informasi", "Ilmu Komputer"],
         applyLink: "https://recruitment.sgn.co.id/software-developer"
     }
 ];
@@ -134,7 +134,7 @@ function displayJobs(jobsToDisplay) {
             </div>
             
             <button class="apply-button" onclick="openApplyModal('${job.companyName}', '${job.title}', '${job.location}')">
-                Lamar Sekarang →
+                Apply Here →
             </button>
         </div>
     `).join('');
@@ -173,7 +173,6 @@ displayJobs(jobs);
 
 let slideIndex = 0;
 let slideInterval;
-
 function showSlides() {
 const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.dot');
@@ -464,18 +463,6 @@ function setupLazyLoading() {
     images.forEach(img => imageObserver.observe(img));
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    setupLazyLoading();
-    setupScrollAnimations();
-    setupActiveNavigation();
-    setupLoadingAnimation();
-    
-    const dots = document.querySelectorAll('.dot');
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => currentSlide(index));
-    });
-});
-
 function debounce(func, wait = 10) {
     let timeout;
     return function executedFunction(...args) {
@@ -528,7 +515,6 @@ function closeModal() {
     }, 300);
 }
 
-// Close modal when clicking outside
 window.onclick = function(event) {
     const modal = document.getElementById('applyModal');
     if (event.target === modal) {
@@ -536,14 +522,12 @@ window.onclick = function(event) {
     }
 }
 
-// Close modal with ESC key
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         closeModal();
     }
 });
 
-// Close button
 document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.querySelector('.modal-close');
     if (closeBtn) {
@@ -553,9 +537,204 @@ document.addEventListener('DOMContentLoaded', () => {
     setupScrollAnimations();
     setupActiveNavigation();
     setupLoadingAnimation();
+    initGalleryScroll();
+    initVideoCarousel();
+    
+    // Enable touch scroll for gallery
+    const galleryContainer = document.getElementById('galleryScrollContainer');
+    if (galleryContainer) {
+        enableTouchScroll(galleryContainer);
+    }
     
     const dots = document.querySelectorAll('.dot');
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => currentSlide(index));
     });
 });
+
+// ===================================
+// GALLERY CAROUSEL IMPLEMENTATION
+// ===================================
+function initGalleryScroll() {
+    const container = document.getElementById('galleryScrollContainer');
+    const leftBtn = document.getElementById('scrollLeft');
+    const rightBtn = document.getElementById('scrollRight');
+    const progressBar = document.getElementById('scrollProgressBar');
+    
+    if (!container || !leftBtn || !rightBtn) return;
+    
+    const scrollAmount = 400;
+    
+    leftBtn.addEventListener('click', () => {
+        container.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+    
+    rightBtn.addEventListener('click', () => {
+        container.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+    
+    function updateScrollState() {
+        const scrollLeft = container.scrollLeft;
+        const scrollWidth = container.scrollWidth - container.clientWidth;
+        const scrollPercentage = (scrollLeft / scrollWidth) * 100;
+        
+        if (progressBar) {
+            progressBar.style.width = scrollPercentage + '%';
+        }
+        
+        leftBtn.disabled = scrollLeft <= 0;
+        rightBtn.disabled = scrollLeft >= scrollWidth - 5;
+        
+        leftBtn.style.opacity = scrollLeft <= 0 ? '0.3' : '1';
+        rightBtn.style.opacity = scrollLeft >= scrollWidth - 5 ? '0.3' : '1';
+    }
+    
+    container.addEventListener('scroll', updateScrollState);
+    
+    updateScrollState();
+}
+
+function enableTouchScroll(container) {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    
+    container.addEventListener('mousedown', (e) => {
+        isDown = true;
+        container.style.cursor = 'grabbing';
+        startX = e.pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+        isDown = false;
+        container.style.cursor = 'grab';
+    });
+    
+    container.addEventListener('mouseup', () => {
+        isDown = false;
+        container.style.cursor = 'grab';
+    });
+    
+    container.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX) * 2;
+        container.scrollLeft = scrollLeft - walk;
+    });
+}
+
+// ===================================
+// VIDEO CAROUSEL IMPLEMENTATION
+// ===================================
+let currentVideoIndex = 0;
+let videoAutoplayInterval;
+
+function initVideoCarousel() {
+    const videoContainer = document.querySelector('.video-carousel-container');
+    const prevBtn = document.querySelector('.video-carousel-prev');
+    const nextBtn = document.querySelector('.video-carousel-next');
+    const indicators = document.querySelectorAll('.video-indicator');
+    
+    if (!videoContainer) return;
+    
+    const videos = videoContainer.querySelectorAll('.video-carousel-item');
+    const totalVideos = videos.length;
+    
+    if (totalVideos === 0) return;
+    
+    function showVideo(index) {
+
+        videos.forEach(item => {
+            const iframe = item.querySelector('iframe');
+            if (iframe) {
+                const src = iframe.src;
+                iframe.src = src;
+            }
+        });
+        
+        videos.forEach((item, i) => {
+            item.classList.toggle('active', i === index);
+        });
+        
+        indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
+        });
+        
+        const offset = -index * 100;
+        videoContainer.style.transform = `translateX(${offset}%)`;
+    }
+    
+    function nextVideo() {
+        currentVideoIndex = (currentVideoIndex + 1) % totalVideos;
+        showVideo(currentVideoIndex);
+    }
+    
+    function prevVideo() {
+        currentVideoIndex = (currentVideoIndex - 1 + totalVideos) % totalVideos;
+        showVideo(currentVideoIndex);
+    }
+    
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            prevVideo();
+            resetAutoplay();
+        });
+    }
+    
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextVideo();
+            resetAutoplay();
+        });
+    }
+    
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            currentVideoIndex = index;
+            showVideo(currentVideoIndex);
+            resetAutoplay();
+        });
+    });
+    
+    function startAutoplay() {
+        videoAutoplayInterval = setInterval(nextVideo, 8000);
+    }
+    
+    function resetAutoplay() {
+        clearInterval(videoAutoplayInterval);
+        startAutoplay();
+    }
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') prevVideo();
+        if (e.key === 'ArrowRight') nextVideo();
+    });
+    
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    videoContainer.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    videoContainer.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50) nextVideo();
+        if (touchEndX > touchStartX + 50) prevVideo();
+    }
+    
+    showVideo(currentVideoIndex);
+    startAutoplay();
+}
