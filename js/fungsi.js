@@ -1,99 +1,99 @@
 const jobs = [
-{
-    id: 1,
-    title: "Software Developer - Digital Factory",
-    company: "ptpn1",
-    companyName: "PTPN I",
-    category: "technology",
-    location: "Jakarta Selatan",
-    type: "fulltime",
-    description: "Bertanggung jawab dalam pengembangan sistem digital internal perusahaan, termasuk pengembangan aplikasi berbasis web dan mobile, integrasi API, serta otomatisasi proses bisnis.",
-    tags: ["Software Development", "Sistem Informasi", "Tek. Informatika", "Ilmu Komputer"],
-    posted: "1 hari yang lalu"
-},
-{
-    id: 2,
-    title: "ODS Bidang Keuangan",
-    company: "ptpn4",
-    companyName: "PTPN IV",
-    category: "finance",
-    location: "Jakarta Selatan",
-    type: "fulltime",
-    description: "Melakukan analisis dan pelaporan keuangan, perencanaan anggaran, serta mendukung implementasi sistem keuangan yang efisien di unit kerja PTPN IV.",
-    tags: ["Keuangan", "Akuntansi", "Reporting", "Budgeting"],
-    posted: "1 hari yang lalu"
-},
-{
-    id: 3,
-    title: "ODS Umum",
-    company: "ptpn4",
-    companyName: "PTPN IV",
-    category: "administration",
-    location: "Jakarta Selatan",
-    type: "fulltime",
-    description: "Mengelola kegiatan administrasi umum, termasuk logistik, pengarsipan dokumen, dan dukungan operasional perusahaan.",
-    tags: ["Hukum", "Psikologi", "Komunikasi", "Manajemen"],
-    posted: "1 hari yang lalu"
-},
-{
-    id: 4,
-    title: "ODS Bidang Keuangan",
-    company: "sgn",
-    companyName: "SGN",
-    category: "finance",
-    location: "Jakarta Selatan",
-    type: "fulltime",
-    description: "Melaksanakan fungsi keuangan dan akuntansi di SGN, termasuk pengelolaan kas, pencatatan transaksi, dan penyusunan laporan keuangan.",
-    tags: ["Keuangan", "Akuntansi", "Reporting", "Budgeting"],
-    posted: "1 hari yang lalu"
-},
-{
-    id: 5,
-    title: "Software Developer - Digital Factory",
-    company: "sgn",
-    companyName: "SGN",
-    category: "technology",
-    location: "Jakarta Selatan",
-    type: "fulltime",
-    description: "Mengembangkan aplikasi digital untuk mendukung transformasi digital SGN, berfokus pada efisiensi proses bisnis dan pengalaman pengguna.",
-    tags: ["Software Development", "Sistem Informasi", "Tek. Informatika", "Ilmu Komputer"],
-    posted: "1 hari yang lalu"
-},
-{
-    id: 6,
-    title: "ODS Bidang Keuangan",
-    company: "ptpn3",
-    companyName: "PTPN III",
-    category: "finance",
-    location: "Jakarta Selatan",
-    type: "fulltime",
-    description: "Bertanggung jawab atas perencanaan, pengawasan, dan pelaporan keuangan di lingkungan PTPN III sesuai standar akuntansi dan kebijakan perusahaan.",
-    tags: ["Keuangan", "Akuntansi", "Reporting", "Budgeting"],
-    posted: "1 hari yang lalu"
-},
-{
-    id: 7,
-    title: "ODS Bidang Operational",
-    company: "ptpn3",
-    companyName: "PTPN III",
-    category: "engineering",
-    location: "Jakarta Selatan",
-    type: "fulltime",
-    description: "Bertanggung jawab dalam mendukung operasional di bidang tanaman dan teknik, memastikan kegiatan produksi berjalan sesuai target dan standar kualitas.",
-    tags: ["Tanaman", "Teknik"],
-    posted: "1 hari yang lalu"
-},
-{
-        id: 8,
+    {
+        id: 1,
+        title: "Software Developer - Digital Factory",
+        company: "ptpn1",
+        companyName: "PTPN I",
+        companyLogo: "/image/ptpn1.png",
+        category: "technology",
+        location: "Jakarta Selatan",
+        type: "contract",
+        majors: ["Teknik Informatika", "Sistem Informasi", "Ilmu Komputer", "Teknik Komputer"],
+        applyLink: "https://recruitment.ptpn1.co.id/software-developer"
+    },
+    {
+        id: 2,
+        title: "ODS Bidang Keuangan",
+        company: "ptpn3",
+        companyName: "PTPN III",
+        companyLogo: "/image/ptpn3.png",
+        category: "finance",
+        location: "Jakarta Selatan",
+        type: "contract",
+        majors: ["Akuntansi", "Manajemen Keuangan", "Ekonomi"],
+        applyLink: "https://recruitment.ptpn3.co.id/ods-keuangan"
+    },
+    {
+        id: 3,
+        title: "ODS Bidang Operational",
+        company: "ptpn3",
+        companyName: "PTPN III",
+        companyLogo: "/image/ptpn3.png",
+        category: "engineering",
+        location: "Jakarta Selatan",
+        type: "contract",
+        majors: ["Agroteknologi", "Agronomi", "Teknik Pertanian", "Teknik Mesin", "Teknik Elektro"],
+        applyLink: "https://recruitment.ptpn3.co.id/ods-operational"
+    },
+    {
+        id: 4,
         title: "ODS Bidang Umum",
         company: "ptpn3",
         companyName: "PTPN III",
+        companyLogo: "/image/ptpn3.png",
         category: "administration",
         location: "Jakarta Selatan",
-        type: "fulltime",
-        description: "Melaksanakan fungsi administrasi umum di berbagai unit kerja, mendukung kegiatan operasional dan koordinasi antar departemen.",
-        tags: ["Semua Jurusan"],
-        posted: "1 hari yang lalu"
+        type: "contract",
+        majors: ["Semua Jurusan"],
+        applyLink: "https://recruitment.ptpn3.co.id/ods-umum"
+    },
+    {
+        id: 5,
+        title: "ODS Bidang Keuangan",
+        company: "ptpn4",
+        companyName: "PTPN IV",
+        companyLogo: "/image/ptpn4.png",
+        category: "finance",
+        location: "Jakarta Selatan",
+        type: "contract",
+        majors: ["Akuntansi", "Manajemen Keuangan", "Ekonomi"],
+        applyLink: "https://recruitment.ptpn4.co.id/ods-keuangan"
+    },
+    {
+        id: 6,
+        title: "ODS Bidang Umum",
+        company: "ptpn4",
+        companyName: "PTPN IV",
+        companyLogo: "/image/ptpn4.png",
+        category: "administration",
+        location: "Jakarta Selatan",
+        type: "contract",
+        majors: ["Hukum", "Psikologi", "Komunikasi", "Manajemen", "Administrasi Bisnis"],
+        applyLink: "https://recruitment.ptpn4.co.id/ods-umum"
+    },
+    {
+        id: 7,
+        title: "ODS Bidang Keuangan",
+        company: "sgn",
+        companyName: "SGN",
+        companyLogo: "/image/sgn.png",
+        category: "finance",
+        location: "Surabaya",
+        type: "contract",
+        majors: ["Akuntansi", "Manajemen Keuangan", "Ekonomi"],
+        applyLink: "https://recruitment.sgn.co.id/ods-keuangan"
+    },
+    {
+        id: 8,
+        title: "Software Developer - Digital Factory",
+        company: "sgn",
+        companyName: "SGN",
+        companyLogo: "/image/sgn.png",
+        category: "technology",
+        location: "Surabaya",
+        type: "contract",
+        majors: ["Teknik Informatika", "Sistem Informasi", "Ilmu Komputer", "Teknik Komputer"],
+        applyLink: "https://recruitment.sgn.co.id/software-developer"
     }
 ];
 
@@ -102,57 +102,51 @@ let filteredJobs = [...jobs];
 let currentFilter = '';
 
 function displayJobs(jobsToDisplay) {
-const container = document.getElementById('job-container');
+    const container = document.getElementById('job-container');
 
-if (jobsToDisplay.length === 0) {
-    container.innerHTML = `
-        <div class="no-results">
-            <h3>Tidak ada lowongan yang sesuai</h3>
-            <p>Belum ada lowongan tersedia untuk perusahaan ini</p>
+    if (jobsToDisplay.length === 0) {
+        container.innerHTML = `
+            <div class="no-results">
+                <h3>Tidak ada lowongan yang sesuai</h3>
+                <p>Belum ada lowongan tersedia untuk perusahaan ini</p>
+            </div>
+        `;
+        return;
+    }
+
+    container.innerHTML = jobsToDisplay.map(job => `
+        <div class="job-card-compact">
+            <div class="job-card-header">
+                <h3 class="job-card-title">${job.title}</h3>
+                <img src="${job.companyLogo}" alt="${job.companyName}" class="company-logo-card">
+            </div>
+            
+            <div class="job-card-meta">
+                <span class="meta-item">📍 ${job.location}</span>
+                <span class="meta-item">💼 ${job.type === 'fulltime' ? 'Full Time' : job.type === 'contract' ? 'Contract' : 'Internship'}</span>
+            </div>
+            
+            <div class="job-card-majors">
+                <span class="majors-label">Jurusan:</span>
+                <div class="majors-tags">
+                    ${job.majors.map(major => `<span class="major-tag">${major}</span>`).join('')}
+                </div>
+            </div>
+            
+            <button class="apply-button" onclick="openApplyModal('${job.companyName}', '${job.title}', '${job.location}')">
+                Lamar Sekarang →
+            </button>
         </div>
-    `;
-    return;
+    `).join('');
 }
-
-container.innerHTML = jobsToDisplay.map(job => `
-    <div class="job-card" onclick="window.location.href='#apply-${job.id}'">
-        <div class="job-header">
-            <div class="job-title">
-                <h3>${job.title}</h3>
-                <span class="company-badge">${job.companyName}</span>
-            </div>
-        </div>
-        <div class="job-meta">
-            <div class="job-meta-item">
-                📍 ${job.location}
-            </div>
-            <div class="job-meta-item">
-                💼 ${job.type === 'fulltime' ? 'Full Time' : job.type === 'contract' ? 'Contract' : 'Internship'}
-            </div>
-            <div class="job-meta-item">
-                🕐 ${job.posted}
-            </div>
-        </div>
-        <div class="job-description">
-            ${job.description}
-        </div>
-        <div class="job-tags">
-            ${job.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-        </div>
-    </div>
-`).join('');
-}
-
 function filterByCompany(companyCode) {
 currentFilter = companyCode;
 
-// Update active tab
 document.querySelectorAll('.company-tab').forEach(tab => {
     tab.classList.remove('active');
 });
 event.target.classList.add('active');
 
-// Filter jobs
 if (companyCode === '') {
     filteredJobs = [...jobs];
 } else {
@@ -451,7 +445,27 @@ function currentSlide(index) {
     showSlide(currentSlideIndex);
 }
 
+function setupLazyLoading() {
+    const images = document.querySelectorAll('img[data-src]');
+    
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                observer.unobserve(img);
+            }
+        });
+    }, {
+        rootMargin: '50px'
+    });
+    
+    images.forEach(img => imageObserver.observe(img));
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    setupLazyLoading();
     setupScrollAnimations();
     setupActiveNavigation();
     setupLoadingAnimation();
@@ -479,3 +493,69 @@ const debouncedScroll = debounce(() => {
 }, 10);
 
 window.addEventListener('scroll', debouncedScroll);
+
+// Modal Functions
+function openApplyModal(company, position, location) {
+    const modal = document.getElementById('applyModal');
+    const modalCompany = document.getElementById('modalCompany');
+    const modalPosition = document.getElementById('modalPosition');
+    const modalLocation = document.getElementById('modalLocation');
+    
+    modalCompany.textContent = company;
+    modalPosition.textContent = position;
+    modalLocation.textContent = location;
+    
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    
+    // Animation
+    setTimeout(() => {
+        modal.querySelector('.modal-content').style.transform = 'scale(1)';
+        modal.querySelector('.modal-content').style.opacity = '1';
+    }, 10);
+}
+
+function closeModal() {
+    const modal = document.getElementById('applyModal');
+    const modalContent = modal.querySelector('.modal-content');
+    
+    modalContent.style.transform = 'scale(0.9)';
+    modalContent.style.opacity = '0';
+    
+    setTimeout(() => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }, 300);
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    const modal = document.getElementById('applyModal');
+    if (event.target === modal) {
+        closeModal();
+    }
+}
+
+// Close modal with ESC key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeModal();
+    }
+});
+
+// Close button
+document.addEventListener('DOMContentLoaded', () => {
+    const closeBtn = document.querySelector('.modal-close');
+    if (closeBtn) {
+        closeBtn.onclick = closeModal;
+    }
+    
+    setupScrollAnimations();
+    setupActiveNavigation();
+    setupLoadingAnimation();
+    
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => currentSlide(index));
+    });
+});

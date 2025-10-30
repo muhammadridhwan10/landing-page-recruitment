@@ -395,6 +395,40 @@ section {
     font-weight: 500;
 }
 
+/* Stats Combined Style */
+.stat-combined {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-number-main {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.stat-divider {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    opacity: 0.7;
+}
+
+.stat-card:hover .stat-combined .stat-number-main {
+    animation: pulse 1s ease infinite;
+    color: var(--primary-dark);
+}
+
+.stat-card:hover .stat-divider {
+    animation: pulse 1s ease infinite;
+    color: var(--primary-dark);
+}
+
 /* ===================================
    VISION & MISSION SECTION
    =================================== */
@@ -475,6 +509,95 @@ section {
     height: 3px;
     background: linear-gradient(to right, transparent, var(--primary-color), transparent);
     margin: 3rem auto;
+}
+
+/* ===================================
+   VIDEO PROFILE SECTION
+   =================================== */
+.video-profile-section {
+    background: #f9f9f9;
+}
+
+.video-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ===================================
+   REQUIREMENTS SECTION
+   =================================== */
+.requirements-section {
+    background: white;
+}
+
+.requirements-grid {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.requirement-card {
+    background: white;
+    padding: 2rem 2.5rem;
+    border-radius: 15px;
+    border: 2px solid var(--border-color);
+    border-left: 5px solid var(--primary-color);
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.requirement-card:hover {
+    border-color: var(--primary-color);
+    transform: translateX(10px);
+    box-shadow: 0 8px 25px rgba(36, 139, 32, 0.15);
+}
+
+.requirement-icon {
+    font-size: 3.5rem;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.requirement-card:hover .requirement-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.requirement-content {
+    flex: 1;
+    text-align: left;
+}
+
+.requirement-card h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.requirement-card p {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.8;
+    margin: 0;
 }
 
 /* Recruitment Flow Section */
@@ -621,84 +744,6 @@ section {
     margin-top: 0.2rem;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .flow-step {
-        grid-template-columns: 80px 1fr;
-        gap: 1.5rem;
-    }
-    
-    .flow-step::before {
-        left: 40px;
-        top: 90px;
-    }
-    
-    .step-circle {
-        width: 80px;
-        height: 80px;
-    }
-    
-    .step-number {
-        font-size: 1.5rem;
-    }
-    
-    .step-circle.icon span {
-        font-size: 2rem;
-    }
-    
-    .step-label {
-        font-size: 0.65rem;
-    }
-    
-    .step-content {
-        padding: 1.5rem;
-    }
-    
-    .step-content h3 {
-        font-size: 1.1rem;
-    }
-
-    .stat-card,
-    .feature-card,
-    .flow-step,
-    .job-card,
-    .vm-item {
-        animation-duration: 0.4s;
-    }
-}
-
-@media (max-width: 480px) {
-    .flow-step {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .flow-step::before {
-        display: none;
-    }
-    
-    .step-circle {
-        width: 100%;
-        height: 70px;
-        flex-direction: row;
-        justify-content: flex-start;
-        padding-left: 1.5rem;
-        gap: 1rem;
-    }
-    
-    .step-number {
-        font-size: 1.8rem;
-    }
-    
-    .step-label {
-        font-size: 0.7rem;
-    }
-    
-    .step-content {
-        padding: 1.2rem;
-    }
-}
-
 /* ===================================
    JOB SECTION
    =================================== */
@@ -738,91 +783,123 @@ section {
     border-color: var(--primary-color);
 }
 
-/* Job Cards */
-.job-grid {
-    display: grid;
-    gap: 1.5rem;
-}
-
-.job-card {
+/* ===================================
+   JOB CARD COMPACT STYLE
+   =================================== */
+.job-card-compact {
     background: white;
     border: 2px solid var(--border-color);
-    border-radius: 15px;
-    padding: 2.5rem;
-    transition: all 0.3s;
-    cursor: pointer;
-}
-
-.job-card:hover {
-    border-color: var(--primary-color);
-    box-shadow: 0 8px 30px rgba(36, 139, 32, 0.15);
-    transform: translateX(5px);
-}
-
-.job-header {
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
     display: flex;
-    justify-content: space-between;
-    align-items: start;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 1rem;
 }
 
-.job-title {
-    flex: 1;
+.job-card-compact:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 20px rgba(36, 139, 32, 0.15);
+    transform: translateY(-3px);
 }
 
-.job-title h3 {
-    font-size: 1.6rem;
-    margin-bottom: 0.8rem;
+.job-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.job-card-title {
+    font-size: 1.2rem;
     color: var(--text-dark);
-}
-
-.company-badge {
-    display: inline-block;
-    padding: 0.4rem 1.2rem;
-    background: var(--primary-color);
-    color: white;
-    border-radius: 25px;
-    font-size: 0.9rem;
+    margin: 0;
+    flex: 1;
+    min-width: 200px;
     font-weight: 600;
 }
 
-.job-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin: 1.5rem 0;
-    color: var(--text-light);
-    font-size: 0.95rem;
+/* Company Logo di Card */
+.company-logo-card {
+    height: 35px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
-.job-meta-item {
+.job-card-compact:hover .company-logo-card {
+    transform: scale(1.05);
+}
+
+.job-card-meta {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.meta-item {
     display: flex;
     align-items: center;
+    gap: 0.4rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.job-card-majors {
+    display: flex;
+    flex-direction: column;
     gap: 0.6rem;
 }
 
-.job-description {
+.majors-label {
+    font-size: 0.85rem;
     color: var(--text-light);
-    margin-bottom: 1.5rem;
-    line-height: 1.8;
-    font-size: 1.05rem;
+    font-weight: 600;
 }
 
-.job-tags {
+.majors-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.7rem;
+    gap: 0.5rem;
 }
 
-.tag {
-    padding: 0.5rem 1.2rem;
+.major-tag {
+    padding: 0.4rem 0.9rem;
     background: var(--primary-light);
-    border-radius: 25px;
-    font-size: 0.9rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
     color: var(--primary-color);
     font-weight: 500;
+}
+
+.apply-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.apply-button:hover {
+    background: var(--primary-dark);
+    transform: translateX(3px);
+    box-shadow: 0 4px 12px rgba(36, 139, 32, 0.3);
+}
+
+/* Job Grid Layout */
+.job-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
 }
 
 .no-results {
@@ -835,6 +912,159 @@ section {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
+
+/* ===================================
+   MODAL STYLES
+   =================================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    max-width: 550px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.modal-close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: all 0.3s;
+    line-height: 1;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.modal-close:hover {
+    color: var(--primary-color);
+    background: var(--primary-light);
+    transform: rotate(90deg);
+}
+
+.modal-icon {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.modal-content h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.modal-text {
+    color: var(--text-dark);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.modal-text strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.modal-info {
+    background: var(--primary-light);
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    border-left: 4px solid var(--primary-color);
+}
+
+.modal-info p {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.modal-info p:last-child {
+    margin-bottom: 0;
+}
+
+.modal-info strong {
+    color: var(--primary-color);
+    min-width: 150px;
+}
+
+.modal-reminder {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.7;
+    text-align: center;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+.modal-button {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(36, 139, 32, 0.2);
+}
+
+.modal-button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(36, 139, 32, 0.3);
+}
+
+.modal-button:active {
+    transform: translateY(0);
+}
+
 
 /* ===================================
    FOOTER
@@ -894,7 +1124,6 @@ footer {
 .footer-section.company-section h3 {
     text-align: center;
 }
-
 
 .footer-company-grid {
     display: grid;
@@ -976,12 +1205,17 @@ footer {
         gap: 2.5rem;
     }
 
-    .job-card {
-        padding: 2rem;
-    }
-
     .section-title h2 {
         font-size: 2.5rem;
+    }
+
+    .requirements-grid {
+        max-width: 700px;
+    }
+    
+    .requirement-card {
+        padding: 1.8rem 2rem;
+        gap: 1.5rem;
     }
 
     .why-features {
@@ -1018,6 +1252,11 @@ footer {
 
     .step-date {
         font-size: 0.85rem;
+    }
+
+    /* Job Grid */
+    .job-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 }
 
@@ -1132,6 +1371,14 @@ footer {
         font-size: 2.5rem;
     }
 
+    .stat-number-main {
+        font-size: 2.5rem;
+    }
+    
+    .stat-divider {
+        font-size: 2rem;
+    }
+
     .vm-item h3 {
         font-size: 2rem;
     }
@@ -1154,23 +1401,6 @@ footer {
     .company-tab {
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
-    }
-
-    .job-card {
-        padding: 1.5rem;
-    }
-
-    .job-title h3 {
-        font-size: 1.3rem;
-    }
-
-    .job-meta {
-        gap: 1rem;
-        font-size: 0.9rem;
-    }
-
-    .job-description {
-        font-size: 1rem;
     }
 
     .footer-content {
@@ -1259,6 +1489,107 @@ footer {
     .step-details p {
         font-size: 0.85rem;
     }
+
+    .requirements-grid {
+        gap: 1.2rem;
+    }
+    
+    .requirement-card {
+        padding: 1.5rem;
+        gap: 1.2rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .requirement-icon {
+        font-size: 3rem;
+    }
+    
+    .requirement-content {
+        text-align: center;
+    }
+    
+    .requirement-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .requirement-card p {
+        font-size: 0.95rem;
+    }
+
+    /* Job Card Responsive */
+    .job-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .job-card-compact {
+        padding: 1.2rem;
+    }
+    
+    .job-card-title {
+        font-size: 1.1rem;
+    }
+    
+    .company-logo-card {
+        height: 30px;
+    }
+    
+    .meta-item {
+        font-size: 0.85rem;
+    }
+    
+    .major-tag {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.8rem;
+    }
+    
+    .apply-button {
+        width: 100%;
+        padding: 0.9rem 1.2rem;
+    }
+
+    .modal-content {
+        padding: 2rem 1.5rem;
+        max-width: 90%;
+    }
+    
+    .modal-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .modal-text {
+        font-size: 0.95rem;
+    }
+    
+    .modal-info {
+        padding: 1rem;
+    }
+    
+    .modal-info p {
+        font-size: 0.85rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+    
+    .modal-info strong {
+        min-width: auto;
+    }
+    
+    .modal-reminder {
+        font-size: 0.85rem;
+    }
+    
+    .modal-button {
+        padding: 0.9rem 1.5rem;
+        font-size: 0.95rem;
+    }
 }
 
 /* Small Mobile */
@@ -1308,6 +1639,18 @@ footer {
         font-size: 2rem;
     }
 
+    .stat-number-main {
+        font-size: 2rem;
+    }
+    
+    .stat-divider {
+        font-size: 1.5rem;
+    }
+    
+    .stat-combined {
+        gap: 0.3rem;
+    }
+
     .stat-label {
         font-size: 0.9rem;
     }
@@ -1324,24 +1667,6 @@ footer {
     .company-tab {
         padding: 0.7rem 1.2rem;
         font-size: 0.85rem;
-    }
-
-    .job-title h3 {
-        font-size: 1.2rem;
-    }
-
-    .company-badge {
-        font-size: 0.85rem;
-        padding: 0.3rem 1rem;
-    }
-
-    .job-meta-item {
-        font-size: 0.85rem;
-    }
-
-    .tag {
-        font-size: 0.85rem;
-        padding: 0.4rem 1rem;
     }
 
     .footer-section h3 {
@@ -1401,7 +1726,7 @@ footer {
     }
     
     .flow-step::before {
-        display: none; /* Hilangkan garis penghubung di mobile */
+        display: none;
     }
     
     .step-circle {
@@ -1457,6 +1782,91 @@ footer {
     .sub-date {
         font-size: 0.75rem;
     }
+
+    /* Job Card Mobile */
+    .job-card-compact {
+        padding: 1rem;
+    }
+    
+    .job-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .job-card-title {
+        font-size: 1rem;
+    }
+    
+    .company-logo-card {
+        height: 28px;
+    }
+    
+    .job-card-meta {
+        gap: 1rem;
+    }
+    
+    .meta-item {
+        font-size: 0.8rem;
+    }
+    
+    .majors-label {
+        font-size: 0.8rem;
+    }
+    
+    .major-tag {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.7rem;
+    }
+
+    .requirement-card {
+        padding: 1.2rem;
+        gap: 1rem;
+    }
+    
+    .requirement-icon {
+        font-size: 2.5rem;
+    }
+    
+    .requirement-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .requirement-card p {
+        font-size: 0.9rem;
+    }
+
+    .modal-content {
+        padding: 1.5rem 1rem;
+    }
+    
+    .modal-close {
+        right: 1rem;
+        top: 1rem;
+        font-size: 1.5rem;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .modal-icon {
+        font-size: 2.5rem;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.3rem;
+    }
+    
+    .modal-text {
+        font-size: 0.9rem;
+    }
+    
+    .modal-info {
+        padding: 0.8rem;
+    }
+    
+    .modal-info p {
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 360px) {
@@ -1500,11 +1910,6 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
 }
 
 @keyframes slideInLeft {
@@ -1588,6 +1993,14 @@ footer {
     animation: none;
 }
 
+.stat-card:nth-child(1) .stat-number-main:first-child {
+    animation-delay: 0.1s;
+}
+
+.stat-card:nth-child(1) .stat-number-main:last-child {
+    animation-delay: 0.2s;
+}
+
 /* ===================================
    ANIMASI UNTUK FEATURE CARDS
    =================================== */
@@ -1645,25 +2058,26 @@ footer {
 /* ===================================
    ANIMASI UNTUK JOB CARDS
    =================================== */
-.job-card {
+.job-card-compact {
     opacity: 0;
     animation: fadeInUp 0.5s ease forwards;
 }
 
-.job-card:nth-child(1) { animation-delay: 0.05s; }
-.job-card:nth-child(2) { animation-delay: 0.1s; }
-.job-card:nth-child(3) { animation-delay: 0.15s; }
-.job-card:nth-child(4) { animation-delay: 0.2s; }
-.job-card:nth-child(5) { animation-delay: 0.25s; }
-.job-card:nth-child(6) { animation-delay: 0.3s; }
+.job-card-compact:nth-child(1) { animation-delay: 0.05s; }
+.job-card-compact:nth-child(2) { animation-delay: 0.1s; }
+.job-card-compact:nth-child(3) { animation-delay: 0.15s; }
+.job-card-compact:nth-child(4) { animation-delay: 0.2s; }
+.job-card-compact:nth-child(5) { animation-delay: 0.25s; }
+.job-card-compact:nth-child(6) { animation-delay: 0.3s; }
+.job-card-compact:nth-child(7) { animation-delay: 0.35s; }
+.job-card-compact:nth-child(8) { animation-delay: 0.4s; }
 
-.company-badge {
+.company-logo-card {
     transition: all 0.3s ease;
 }
 
-.job-card:hover .company-badge {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(36, 139, 32, 0.3);
+.job-card-compact:hover .company-logo-card {
+    transform: scale(1.1) rotate(2deg);
 }
 
 /* ===================================
@@ -1853,3 +2267,19 @@ html {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* ===================================
+   ANIMASI UNTUK REQUIREMENTS
+   =================================== */
+.requirement-card {
+    opacity: 0;
+    animation: slideInRight 0.6s ease forwards;
+}
+
+.requirement-card:nth-child(1) { animation-delay: 0.1s; }
+.requirement-card:nth-child(2) { animation-delay: 0.2s; }
+.requirement-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* Jika ada lebih banyak requirement card */
+.requirement-card:nth-child(4) { animation-delay: 0.4s; }
+.requirement-card:nth-child(5) { animation-delay: 0.5s; }
