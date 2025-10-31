@@ -3,7 +3,7 @@ const jobs = [
         id: 1,
         title: "Staff Finance",
         company: "ptpn3",
-        companyName: "PTPN III",
+        companyName: "PTPN III (Persero)",
         companyLogo: "/image/ptpn3.png",
         category: "finance",
         location: "Jakarta Selatan",
@@ -15,7 +15,7 @@ const jobs = [
         id: 2,
         title: "Staff Production",
         company: "ptpn3",
-        companyName: "PTPN III",
+        companyName: "PTPN III (Persero)",
         companyLogo: "/image/ptpn3.png",
         category: "engineering",
         location: "Jakarta Selatan",
@@ -27,7 +27,7 @@ const jobs = [
         id: 3,
         title: "Staff HC & Legal",
         company: "ptpn3",
-        companyName: "PTPN III",
+        companyName: "PTPN III (Persero)",
         companyLogo: "/image/ptpn3.png",
         category: "administration",
         location: "Jakarta Selatan",
@@ -685,14 +685,12 @@ function initVideoCarousel() {
     if (prevBtn) {
         prevBtn.addEventListener('click', () => {
             prevVideo();
-            resetAutoplay();
         });
     }
     
     if (nextBtn) {
         nextBtn.addEventListener('click', () => {
             nextVideo();
-            resetAutoplay();
         });
     }
     
@@ -700,24 +698,15 @@ function initVideoCarousel() {
         indicator.addEventListener('click', () => {
             currentVideoIndex = index;
             showVideo(currentVideoIndex);
-            resetAutoplay();
         });
     });
-    
-    function startAutoplay() {
-        videoAutoplayInterval = setInterval(nextVideo, 8000);
-    }
-    
-    function resetAutoplay() {
-        clearInterval(videoAutoplayInterval);
-        startAutoplay();
-    }
     
     document.addEventListener('keydown', (e) => {
         if (e.key === 'ArrowLeft') prevVideo();
         if (e.key === 'ArrowRight') nextVideo();
     });
     
+
     let touchStartX = 0;
     let touchEndX = 0;
     
@@ -736,5 +725,4 @@ function initVideoCarousel() {
     }
     
     showVideo(currentVideoIndex);
-    startAutoplay();
 }
