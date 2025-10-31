@@ -9,7 +9,7 @@ const jobs = [
         location: "Jakarta Selatan",
         type: "contract",
         majors: ["Akuntansi", "Manajemen Keuangan", "Ekonomi"],
-        applyLink: "https://recruitment.ptpn3.co.id/staff-keuangan"
+        applyLink: "https://www.rakamin.com/career-solutions/job-applications?referrer=linkedin&external_id=ptpn-iii-finance-trt5dbig1s"
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ const jobs = [
         location: "Jakarta Selatan",
         type: "contract",
         majors: ["Agroteknologi", "Agronomi", "Teknik Pertanian", "Teknik Mesin", "Teknik Elektro"],
-        applyLink: "https://recruitment.ptpn3.co.id/staff-operational"
+        applyLink: "https://www.rakamin.com/career-solutions/job-applications?referrer=linkedin&external_id=ptpn-iii-production-hwsqr24yiw"
     },
     {
         id: 3,
@@ -33,7 +33,7 @@ const jobs = [
         location: "Jakarta Selatan",
         type: "contract",
         majors: ["Psikologi","Hukum","Manajemen","Semua Jurusan"],
-        applyLink: "https://recruitment.ptpn3.co.id/staff-umum"
+        applyLink: "https://www.rakamin.com/career-solutions/job-applications?referrer=linkedin&external_id=ptpn-iii-hc-legal-w6t6d81z7d"
     },
     {
         id: 4,
@@ -45,7 +45,7 @@ const jobs = [
         location: "Jakarta Selatan",
         type: "contract",
         majors: ["Teknik Informatika", "Teknologi Rekayasa Perangkat Lunak", "Sistem Informasi", "Ilmu Komputer", "GIS"],
-        applyLink: "https://recruitment.ptpn1.co.id/software-developer"
+        applyLink: "https://www.rakamin.com/career-solutions/job-applications?referrer=linkedin&external_id=ptpn-i-software-developer-jvcfzg8yik"
     },
     {
         id: 5,
@@ -57,7 +57,7 @@ const jobs = [
         location: "Jakarta Selatan",
         type: "contract",
         majors: ["Akuntansi", "Manajemen Keuangan", "Ekonomi"],
-        applyLink: "https://recruitment.ptpn4.co.id/staff-keuangan"
+        applyLink: "https://www.rakamin.com/career-solutions/job-applications?referrer=linkedin&external_id=ptpn-iv-finance-1q974ggwq4"
     },
     {
         id: 6,
@@ -69,7 +69,7 @@ const jobs = [
         location: "Jakarta Selatan",
         type: "contract",
         majors: ["Psikologi","Hukum","Manajemen"],
-        applyLink: "https://recruitment.ptpn4.co.id/staff-umum"
+        applyLink: "https://www.rakamin.com/career-solutions/job-applications?referrer=linkedin&external_id=ptpn-iv-hc-legal-82x7epohez"
     },
     {
         id: 7,
@@ -81,7 +81,7 @@ const jobs = [
         location: "Surabaya",
         type: "contract",
         majors: ["Akuntansi", "Manajemen Keuangan", "Ekonomi"],
-        applyLink: "https://recruitment.sgn.co.id/staff-keuangan"
+        applyLink: "https://www.rakamin.com/career-solutions/job-applications?referrer=linkedin&external_id=pt-sgn-finance-tdrygjjcvw"
     },
     {
         id: 8,
@@ -93,7 +93,7 @@ const jobs = [
         location: "Surabaya",
         type: "contract",
         majors: ["Teknik Informatika", "Teknologi Rekayasa Perangkat Lunak", "Sistem Informasi", "Ilmu Komputer"],
-        applyLink: "https://recruitment.sgn.co.id/software-developer"
+        applyLink: "https://www.rakamin.com/career-solutions/job-applications?referrer=linkedin&external_id=pt-sgn-software-developer-76hnt1ybcl"
     }
 ];
 
@@ -133,9 +133,10 @@ function displayJobs(jobsToDisplay) {
                 </div>
             </div>
             
-            <button class="apply-button" onclick="openApplyModal('${job.companyName}', '${job.title}', '${job.location}')">
+            <a class="apply-button" href="${job.applyLink}" target="_blank" rel="noopener noreferrer">
                 Apply Here →
-            </button>
+            </a>
+
         </div>
     `).join('');
 }
