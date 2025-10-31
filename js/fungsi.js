@@ -1,18 +1,6 @@
 const jobs = [
     {
         id: 1,
-        title: "Staff Software Developer",
-        company: "ptpn1",
-        companyName: "PTPN I",
-        companyLogo: "/image/ptpn1.png",
-        category: "technology",
-        location: "Jakarta Selatan",
-        type: "contract",
-        majors: ["Teknik Informatika", "Teknologi Rekayasa Perangkat Lunak", "Sistem Informasi", "Ilmu Komputer", "GIS"],
-        applyLink: "https://recruitment.ptpn1.co.id/software-developer"
-    },
-    {
-        id: 2,
         title: "Staff Finance",
         company: "ptpn3",
         companyName: "PTPN III",
@@ -24,7 +12,7 @@ const jobs = [
         applyLink: "https://recruitment.ptpn3.co.id/staff-keuangan"
     },
     {
-        id: 3,
+        id: 2,
         title: "Staff Production",
         company: "ptpn3",
         companyName: "PTPN III",
@@ -36,7 +24,7 @@ const jobs = [
         applyLink: "https://recruitment.ptpn3.co.id/staff-operational"
     },
     {
-        id: 4,
+        id: 3,
         title: "Staff HC & Legal",
         company: "ptpn3",
         companyName: "PTPN III",
@@ -46,6 +34,18 @@ const jobs = [
         type: "contract",
         majors: ["Psikologi","Hukum","Manajemen","Semua Jurusan"],
         applyLink: "https://recruitment.ptpn3.co.id/staff-umum"
+    },
+    {
+        id: 4,
+        title: "Staff Software Developer",
+        company: "ptpn1",
+        companyName: "PTPN I",
+        companyLogo: "/image/ptpn1.png",
+        category: "technology",
+        location: "Jakarta Selatan",
+        type: "contract",
+        majors: ["Teknik Informatika", "Teknologi Rekayasa Perangkat Lunak", "Sistem Informasi", "Ilmu Komputer", "GIS"],
+        applyLink: "https://recruitment.ptpn1.co.id/software-developer"
     },
     {
         id: 5,
